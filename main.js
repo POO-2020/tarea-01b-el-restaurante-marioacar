@@ -3,7 +3,8 @@ import Fecha from "./fecha.js"
 import Tiempo from "./tiempo.js"
 import Direccion from "./direccion.js"
 import Producto from "./producto.js"
-import Pedido from "./Pedido.js/01.html"
+import Pedido from "./Pedido.js/"
+import Cliente from "./cliente.js"
 class Main{
 
     constructor(){
@@ -51,6 +52,12 @@ class Main{
         console.log(pedido.getDescripcionP())
     }
 
+    getPerfil(){
+        console("**PERFIL**")
+        let cliente = new Cliente (new Nombre ("Mario Carvantes"), new Direccion ("Loma Bonita"), new Telefono (312-125-01-44))
+        console.log(cliente.getPerfil())
+    }
+
 }
 
 let app = new Main
@@ -60,3 +67,4 @@ app.probarDireccion()
 app.probarPrecio()
 app.probarProducto()
 app.probarPedido()
+app.probarPerfil()
