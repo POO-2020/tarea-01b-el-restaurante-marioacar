@@ -1,14 +1,7 @@
-import Precio from "./precio.js"
-import Fecha from "./fecha.js"
-import Tiempo from "./tiempo.js"
-import Direccion from "./direccion.js"
-import Producto from "./producto.js"
-import Pedido from "./Pedido.js/"
-import Cliente from "./cliente.js"
-import PedidoF from "./pedidoF.js"
+
 export default class restaurante{
 
-    constructor(nombre,telefono,direccion = new Direccion,producto = new Producto, Pedido = new PedidoF){
+    constructor(nombre,telefono,direccion = new Direccion,producto = new Producto, Pedido = new Pedido){
         this.nombre = nombre
         this.telefono = telefono
         this.direccion = direccion

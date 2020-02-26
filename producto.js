@@ -1,6 +1,5 @@
-import Precio from "./precio.js"
 export default class Producto {
-    constructor(nombre, precio = new Precio){
+    constructor(nombre, precio){
         this.nombre = nombre
         this.precio = precio
     }
