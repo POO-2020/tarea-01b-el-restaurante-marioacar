@@ -5,6 +5,7 @@ import Direccion from "./direccion.js"
 import Producto from "./producto.js"
 import Pedido from "./Pedido.js/"
 import Cliente from "./cliente.js"
+import Restaurante from "./restaurante.js"
 class Main{
 
     constructor(){
