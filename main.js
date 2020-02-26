@@ -1,5 +1,7 @@
 import Precio from "./precio.js"
 import Fecha from "./fecha.js"
+import Tiempo from "./tiempo.js"
+import Direccion from "./direccion.js"
 class Main{
 
     constructor(){
@@ -22,8 +24,22 @@ class Main{
         console.log(fecha.getDiaFecha())
     }
 
+    probarTiempo(){
+        let tiempo = new Tiempo (1,55, "pm")
+        console.log(tiempo.getFormato24())
+    }
+
+    probarDireccion(){
+        let direccion = new Direccion ("villa bonita",571,"real Loma",28984,"villa","villa de Alvarez")
+        console.log(direccion.getFormatoCorto())
+        console.log(direccion.getFormatoLargo())
+    }
+
+
 }
 
 let app = new Main
 app.probarPrecio()
 app.probarFecha()
+app.probarTiempo()
+app.probarDireccion()
