@@ -6,9 +6,14 @@ import Producto from "./producto.js"
 import Pedido from "./Pedido.js/"
 import Cliente from "./cliente.js"
 import Restaurante from "./restaurante.js"
+import PedidoF from "./pedidoF.js"
 class Main{
 
     constructor(){
+        this.pedido1 = new PedidoF(new Nombre("mario carvantes"),new Telefono(312-111-60-89), new Direccion("loma fea"))
+        this.pedido2 = new PedidoF(new Nombre("Astolfo WinterFlang"),new Telefono(312-330-20-79), new Direccion("residencial chida"))
+        this.producto1 = new Producto("pizza de peperoni grande")
+        this.producto2 = new Producto("pizza familiar hyper grande")
     }
 
     probarFecha(){
@@ -55,7 +60,7 @@ class Main{
 
     ProbarPerfil(){
         console("**PERFIL**")
-        let cliente = new Cliente (new Nombre ("Mario Carvantes"), new Direccion ("Loma Bonita"), new Telefono (312-125-01-44))
+        let cliente = new Cliente (new Nombre ("Mario Carvantes"), new Direccion ("Loma Bonita"), new Telefono (312-125-10-44))
         console.log(cliente.getPerfil())
     }
 
@@ -69,6 +74,15 @@ class Main{
         pedido.listarElementos()
     }
 
+    probarRestaurante(){
+        console.log("**RESTAURANTE**")
+        console.log(this.pedido1.producto1)
+        console.log(this.pedido2.producto2)
+        this.producto1.registrarDoctores(this.pedido1)
+        this.producto2.registrarDoctores(this.pedido2)
+        this.hospital.listarDoctores()
+    }
+
 }
 
 let app = new Main
@@ -80,3 +94,4 @@ app.probarProducto()
 app.probarPedido()
 app.probarPerfil()
 app.probarPedidoF()
+app.probarRestaurante()
