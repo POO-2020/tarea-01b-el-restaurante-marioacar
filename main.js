@@ -52,10 +52,20 @@ class Main{
         console.log(pedido.getDescripcionP())
     }
 
-    getPerfil(){
+    ProbarPerfil(){
         console("**PERFIL**")
         let cliente = new Cliente (new Nombre ("Mario Carvantes"), new Direccion ("Loma Bonita"), new Telefono (312-125-01-44))
         console.log(cliente.getPerfil())
+    }
+
+    probarPedidoF(){
+        console.log("**PedidoF**")
+        let pedido = new Pedido(new Fecha(2,12 ,2020 ), new Tiempo(9,40,"pm"), this.Pedido, this.cliente)
+        console.log(pedido.getCostoTotal())
+        console.log(pedido.getResumen())
+        console.log(pedido.getProductos())
+        pedido.agregarElemento(this.producto)
+        pedido.listarElementos()
     }
 
 }
@@ -68,3 +78,4 @@ app.probarPrecio()
 app.probarProducto()
 app.probarPedido()
 app.probarPerfil()
+app.probarPedidoF()
