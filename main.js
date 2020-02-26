@@ -3,6 +3,7 @@ import Fecha from "./fecha.js"
 import Tiempo from "./tiempo.js"
 import Direccion from "./direccion.js"
 import Producto from "./producto.js"
+import Pedido from "./Pedido.js/01.html"
 class Main{
 
     constructor(){
@@ -39,14 +40,16 @@ class Main{
     }
 
     probarProducto(){
+        console.log("**PRODUCTO**")
         let producto = new Producto ("pizza de peperoni grande", new Precio (250.50))
         console.log(producto.getDescripcion())
     }
 
-
-
-
-
+    probarPedido(){
+        console.log("**ELEMENTO PEDIDO**")
+        let pedido = new Pedido (3, new Producto("pizzas chicas de salchicha"), new precio (350))
+        console.log(pedido.getDescripcionP())
+    }
 
 }
 
@@ -56,3 +59,4 @@ app.probarTiempo()
 app.probarDireccion()
 app.probarPrecio()
 app.probarProducto()
+app.probarPedido()
