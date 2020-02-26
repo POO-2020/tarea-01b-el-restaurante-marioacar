@@ -1,18 +1,10 @@
-export default class Precio{
-    /**
-     * 
-     * @param {number} precio 
-     */
-
+ export default class Precio{
 
     constructor(precio){
         this.precio = precio
     }
-    
+
     getPrecio(){
-        return (`$${this.precio.getPrecio()}`)
+        return `$${this.precio.toFixed(2)}`
     }
-
-
-
 }

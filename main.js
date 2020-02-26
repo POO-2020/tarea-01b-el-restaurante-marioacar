@@ -1,16 +1,16 @@
-import precio from "./precio.js"
+import Precio from "./precio.js"
 class Main{
 
     constructor(){
-        this.precio = new precio (121.45)
-    }
 
+    }
 
     probarPrecio(){
-        console.log(`${this.precio.getPrecio()}`)
+        console.log("PRECIO")
+        let precio = new Precio (125.50)
+        console.log(precio.getPrecio())
     }
-
 }
 
-let app = new Main()
+let app = new Main
 app.probarPrecio()
