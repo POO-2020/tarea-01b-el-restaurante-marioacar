@@ -2,15 +2,10 @@ import Precio from "./precio.js"
 import Fecha from "./fecha.js"
 import Tiempo from "./tiempo.js"
 import Direccion from "./direccion.js"
+import Producto from "./producto.js"
 class Main{
 
     constructor(){
-    }
-
-    probarPrecio(){
-        console.log("**PRECIO**")
-        let precio = new Precio (125.50)
-        console.log(precio.getPrecio())
     }
 
     probarFecha(){
@@ -25,21 +20,39 @@ class Main{
     }
 
     probarTiempo(){
+        console.log("**TIEMPO**")
         let tiempo = new Tiempo (1,55, "pm")
         console.log(tiempo.getFormato24())
     }
 
     probarDireccion(){
+        console.log("**DIRECCION**")
         let direccion = new Direccion ("villa bonita",571,"real Loma",28984,"villa","villa de Alvarez")
         console.log(direccion.getFormatoCorto())
         console.log(direccion.getFormatoLargo())
     }
 
+    probarPrecio(){
+        console.log("**PRECIO**")
+        let precio = new Precio (125.50)
+        console.log(precio.getPrecio())
+    }
+
+    probarProducto(){
+        let producto = new Producto ("pizza de peperoni grande", new Precio (250.50))
+        console.log(producto.getDescripcion())
+    }
+
+
+
+
+
 
 }
 
 let app = new Main
-app.probarPrecio()
 app.probarFecha()
 app.probarTiempo()
 app.probarDireccion()
+app.probarPrecio()
+app.probarProducto()
